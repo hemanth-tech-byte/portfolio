@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #07090e;
+    color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #07090e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+  }
+}
+
+/* Print Stylesheet for ATS Resume Printing & PDF Export */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+  }
+
+  header,
+  footer,
+  nav,
+  #hero,
+  #about,
+  #skills,
+  #projects,
+  #creator,
+  #contact,
+  .no-print {
+    display: none !important;
+  }
+
+  #resume-printable-area,
+  .printable-resume-container {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  .printable-resume-container * {
+    color: #0f172a !important;
+    background: transparent !important;
+    border-color: #cbd5e1 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #0284c7 !important;
+  }
+}
+
